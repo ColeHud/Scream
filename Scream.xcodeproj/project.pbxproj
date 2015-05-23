@@ -14,6 +14,7 @@
 		EDA477201B113A9F00D4466D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA4771F1B113A9F00D4466D /* Images.xcassets */; };
 		EDA477231B113A9F00D4466D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA477211B113A9F00D4466D /* LaunchScreen.xib */; };
 		EDA4772F1B113A9F00D4466D /* ScreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA4772E1B113A9F00D4466D /* ScreamTests.m */; };
+		EDA4773A1B113F9300D4466D /* MessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA477391B113F9300D4466D /* MessagingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		EDA477281B113A9F00D4466D /* ScreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA4772D1B113A9F00D4466D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA4772E1B113A9F00D4466D /* ScreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreamTests.m; sourceTree = "<group>"; };
+		EDA477381B113F9300D4466D /* MessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingViewController.h; sourceTree = "<group>"; };
+		EDA477391B113F9300D4466D /* MessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				EDA477191B113A9F00D4466D /* ViewController.h */,
 				EDA4771A1B113A9F00D4466D /* ViewController.m */,
 				EDA4771C1B113A9F00D4466D /* Main.storyboard */,
+				EDA477381B113F9300D4466D /* MessagingViewController.h */,
+				EDA477391B113F9300D4466D /* MessagingViewController.m */,
 				EDA4771F1B113A9F00D4466D /* Images.xcassets */,
 				EDA477211B113A9F00D4466D /* LaunchScreen.xib */,
 				EDA477121B113A9F00D4466D /* Supporting Files */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA4771B1B113A9F00D4466D /* ViewController.m in Sources */,
+				EDA4773A1B113F9300D4466D /* MessagingViewController.m in Sources */,
 				EDA477181B113A9F00D4466D /* AppDelegate.m in Sources */,
 				EDA477151B113A9F00D4466D /* main.m in Sources */,
 			);
