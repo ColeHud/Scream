@@ -67,7 +67,6 @@
         PFPush *push = [[PFPush alloc] init];
         
         // Be sure to use the plural 'setChannels'.
-        string = [NSString stringWithFormat:@"%@: %@", _user[@"chatName"], string];
         [push setChannel:channel];
         [push setMessage:string];
         [push sendPushInBackground];
