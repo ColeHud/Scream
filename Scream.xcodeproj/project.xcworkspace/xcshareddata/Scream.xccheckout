@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E02211C3-A758-4EAF-B9E6-5D97FFDD78C8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Scream</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A2631FAE6D7D0F22D605B2DAD13AC1F8A82FC65B</key>
 		<string>https://github.com/ColeHud/Scream.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Scream.xcodeproj/project.xcworkspace</string>
+	<string>Scream.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A2631FAE6D7D0F22D605B2DAD13AC1F8A82FC65B</key>

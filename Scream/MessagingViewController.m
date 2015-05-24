@@ -12,8 +12,6 @@
 @interface MessagingViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
-
-
 @end
 
 @implementation MessagingViewController
@@ -22,7 +20,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"%@", _user);
+    
+    //id
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    _user[@"channelUserID"] = [NSString stringWithFormat:@"%@%@", @"a", [currentInstallation objectId]];
+    [currentInstallation saveInBackground];
+    [_user saveInBackground];
+    
+    //subscribe
+    NSString *channel = _user[@"channelUserID"];
+    currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:channel forKey:@"channels"];
+    [currentInstallation saveInBackground];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,10 +46,35 @@
     NSString *string = self.inputTextField.text;
     [self.inputTextField setText:@""];
     
-    PFPush *push = [[PFPush alloc] init];
-    [push setChannel:@"hackers"];
-    [push setMessage:string];
-    [push sendPushInBackground];
+    //get the user's geopoint
+    PFGeoPoint *point = _user[@"location"];
+    // Create a query for places
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    // Interested in locations near user.
+    [query whereKey:@"location" nearGeoPoint:point withinMiles:1];
+    // Limit what could be a lot of points.
+    query.limit = 10000;
+    // Final list of objects
+    NSArray *objects = [query findObjects];
+    
+    NSMutableArray *channels;
+    
+    for(PFObject *p in objects)
+    {
+        NSString *channel = p[@"channelUserID"];
+        
+        NSLog(channel);
+        PFPush *push = [[PFPush alloc] init];
+        
+        // Be sure to use the plural 'setChannels'.
+        string = [NSString stringWithFormat:@"%@: %@", _user[@"chatName"], string];
+        [push setChannel:channel];
+        [push setMessage:string];
+        [push sendPushInBackground];
+    }
+    
+    
+    
 }
 
 

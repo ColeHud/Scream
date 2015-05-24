@@ -23,8 +23,11 @@
         if (!error) {
             // do something with the new geoPoint
             PFGeoPoint *point = geoPoint;
+            PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+            currentInstallation[@"location"] = point;
             
             _user[@"location"] = point;
+            [_user saveInBackground];
             
         }
     }];
@@ -35,7 +38,26 @@
 - (IBAction)startButtonPressed:(id)sender
 {
     _user[@"chatName"] = _textField.text;
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    
+    if([currentInstallation objectId])
+    {
+        _user[@"channelUserID"] = [NSString stringWithFormat:@"%@%@", @"a", [currentInstallation objectId]];
+    }
+    else
+    {
+        _user[@"channelUserID"] = @"id";
+    }
+    
+    //subscribe to your unique channel
+    [currentInstallation addUniqueObject:_user[@"channelUserID"] forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    
+    //get installation info to the user
     [_user saveInBackground];
+    
+    // Associate the device with a user
+    
 }
 
 //send user variable onward
