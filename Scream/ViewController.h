@@ -17,5 +17,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic)PFObject *user;
+
 @end
 

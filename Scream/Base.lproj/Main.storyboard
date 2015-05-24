@@ -21,7 +21,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-qB-mLv">
                                 <rect key="frame" x="217" y="194" width="167" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-NC-47X">
@@ -73,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-QZ-Bwy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-QZ-Bwy">
                                 <rect key="frame" x="165" y="285" width="270" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -81,33 +81,31 @@
                                     <action selector="return:" destination="uZH-KV-6cs" eventType="editingDidEnd" id="bDq-2s-sIu"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-Io-rLL">
-                                <rect key="frame" x="538" y="285" width="46" height="30"/>
-                                <state key="normal" title="Send">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-Io-rLL">
+                                <rect key="frame" x="526" y="285" width="58" height="30"/>
+                                <state key="normal" title="Scream">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="sendButtonClicked:" destination="uZH-KV-6cs" eventType="touchUpInside" id="t5t-Vt-f52"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScreamLogo2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W2S-xH-Cxo">
+                                <rect key="frame" x="167" y="55" width="267" height="179"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="leading" secondItem="IyI-qs-ik5" secondAttribute="leadingMargin" constant="10" id="6aq-9Y-dPt"/>
-                            <constraint firstAttribute="centerY" secondItem="O9J-QZ-Bwy" secondAttribute="centerY" id="9Sv-O1-n3m"/>
-                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="trailing" secondItem="IyI-qs-ik5" secondAttribute="trailingMargin" id="G6F-RD-HJI"/>
-                            <constraint firstAttribute="centerX" secondItem="O9J-QZ-Bwy" secondAttribute="centerX" constant="-0.5" id="Icl-Ft-bJQ"/>
-                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="leading" secondItem="O9J-QZ-Bwy" secondAttribute="trailing" constant="10" id="NcO-st-Jnn"/>
-                            <constraint firstAttribute="centerY" secondItem="Xjg-Io-rLL" secondAttribute="centerY" id="rwi-W4-kFk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O9J-QZ-Bwy" secondAttribute="trailing" constant="10" id="uAM-bg-Rkz"/>
-                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="width" secondItem="IyI-qs-ik5" secondAttribute="height" multiplier="23:300" id="uyI-1B-bmW"/>
+                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="leading" secondItem="O9J-QZ-Bwy" secondAttribute="trailing" constant="20" id="85d-WO-Klt"/>
+                            <constraint firstItem="W2S-xH-Cxo" firstAttribute="width" secondItem="IyI-qs-ik5" secondAttribute="height" multiplier="89:200" id="Hj4-0C-pT4"/>
+                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="top" secondItem="Xjg-Io-rLL" secondAttribute="top" id="Mt2-hB-12N"/>
+                            <constraint firstItem="W2S-xH-Cxo" firstAttribute="top" secondItem="v3w-yh-nph" secondAttribute="bottom" constant="35" id="Oke-rS-4OI"/>
+                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="trailing" secondItem="IyI-qs-ik5" secondAttribute="trailingMargin" id="YNe-kv-pM9"/>
+                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="centerY" secondItem="IyI-qs-ik5" secondAttribute="centerY" id="ZTn-pq-rVq"/>
+                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="top" secondItem="W2S-xH-Cxo" secondAttribute="bottom" constant="51" id="cNb-Zv-KrU"/>
+                            <constraint firstAttribute="centerX" secondItem="W2S-xH-Cxo" secondAttribute="centerX" id="emg-6p-soc"/>
+                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="leading" secondItem="IyI-qs-ik5" secondAttribute="leadingMargin" constant="10" id="id9-uw-WAI"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Icl-Ft-bJQ"/>
-                                <exclude reference="uAM-bg-Rkz"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="inputTextField" destination="O9J-QZ-Bwy" id="Nns-Np-v9u"/>
@@ -119,4 +117,7 @@
             <point key="canvasLocation" x="1028" y="225"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ScreamLogo2.jpg" width="792" height="612"/>
+    </resources>
 </document>

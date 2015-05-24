@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2719D31B11EDFB007916C0 /* ScreamLogo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2719D21B11EDFB007916C0 /* ScreamLogo2.jpg */; };
 		EDA477151B113A9F00D4466D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA477141B113A9F00D4466D /* main.m */; };
 		EDA477181B113A9F00D4466D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA477171B113A9F00D4466D /* AppDelegate.m */; };
 		EDA4771B1B113A9F00D4466D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA4771A1B113A9F00D4466D /* ViewController.m */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED2719D21B11EDFB007916C0 /* ScreamLogo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScreamLogo2.jpg; sourceTree = SOURCE_ROOT; };
 		EDA4770F1B113A9F00D4466D /* Scream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA477131B113A9F00D4466D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA477141B113A9F00D4466D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		EDA477111B113A9F00D4466D /* Scream */ = {
 			isa = PBXGroup;
 			children = (
+				ED2719D21B11EDFB007916C0 /* ScreamLogo2.jpg */,
 				EDA477161B113A9F00D4466D /* AppDelegate.h */,
 				EDA477171B113A9F00D4466D /* AppDelegate.m */,
 				EDA477191B113A9F00D4466D /* ViewController.h */,
@@ -278,6 +281,7 @@
 			files = (
 				EDA4771E1B113A9F00D4466D /* Main.storyboard in Resources */,
 				EDA4773E1B11507500D4466D /* parse-library-1.7.4 in Resources */,
+				ED2719D31B11EDFB007916C0 /* ScreamLogo2.jpg in Resources */,
 				EDA477231B113A9F00D4466D /* LaunchScreen.xib in Resources */,
 				EDA477201B113A9F00D4466D /* Images.xcassets in Resources */,
 			);
@@ -509,6 +513,7 @@
 				EDA477341B113AA000D4466D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDA477351B113AA000D4466D /* Build configuration list for PBXNativeTarget "ScreamTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				EDA477371B113AA000D4466D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

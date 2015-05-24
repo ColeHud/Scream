@@ -11,6 +11,7 @@
 
 @interface MessagingViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
 @end
 
@@ -32,6 +33,8 @@
     currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation addUniqueObject:channel forKey:@"channels"];
     [currentInstallation saveInBackground];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,12 +66,10 @@
     {
         NSString *channel = p[@"channelUserID"];
         
-        NSLog(channel);
-        
         //only push to people who aren't you
-        NSLog(@"%@, %@", channel, _user[@"channelUserID"]);
         if(![channel isEqualToString:_user[@"channelUserID"]])
         {
+            NSLog(@"%@", channel);
             PFPush *push = [[PFPush alloc] init];
             
             // Be sure to use the plural 'setChannels'.
