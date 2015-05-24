@@ -18,6 +18,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    if(IS_OS_8_OR_LATER) {
+        [_locationManager requestAlwaysAuthorization];
+    }
+    
+    [_locationManager startUpdatingLocation];
+    
+    NSLog(@"%f", _locationManager.location.coordinate.latitude);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

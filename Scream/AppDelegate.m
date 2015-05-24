@@ -32,6 +32,11 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+    //subscribe
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:@"hackers" forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    
     
     return YES;
 }

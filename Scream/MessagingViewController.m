@@ -34,6 +34,11 @@
 {
     NSString *string = self.inputTextField.text;
     [self.inputTextField setText:@""];
+    
+    PFPush *push = [[PFPush alloc] init];
+    [push setChannel:@"hackers"];
+    [push setMessage:string];
+    [push sendPushInBackground];
 }
 
 
