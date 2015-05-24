@@ -7,6 +7,7 @@
 //
 
 #import "MessagingViewController.h"
+#import "ViewController.h"
 
 @interface MessagingViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
@@ -21,6 +22,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%@", _user);
 }
 
 - (void)didReceiveMemoryWarning

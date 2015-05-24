@@ -17,26 +17,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //parse data
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    
+    [Parse enableLocalDatastore];
     
     //parse keys
     [Parse setApplicationId:@"vnAVRlzqnAX7tQsIR3vHwHdgXKuj0t93vErHDZTw"
                   clientKey:@"DypKFJz1lYuWZ9JWStZ10sndbtGV6JRTdGCsM0Yp"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     
     //register for notifications
     // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);
+    
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
     //subscribe
+    /*
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation addUniqueObject:@"hackers" forKey:@"channels"];
     [currentInstallation saveInBackground];
-    
+     */
+     
     
     return YES;
 }

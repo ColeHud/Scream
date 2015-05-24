@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ViewController.h"
 
 @interface MessagingViewController : UIViewController
-
+@property (strong, nonatomic)PFObject *user;
 @end

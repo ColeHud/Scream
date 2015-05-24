@@ -38,7 +38,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uZH-KV-6cs" kind="show" id="WxL-fV-lG0"/>
+                                    <action selector="startButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MaM-NK-rLR"/>
+                                    <segue destination="uZH-KV-6cs" kind="show" identifier="showMessaging" id="WxL-fV-lG0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,6 +53,10 @@
                             <constraint firstItem="wCc-NC-47X" firstAttribute="top" secondItem="9Jj-qB-mLv" secondAttribute="bottom" constant="8" symbolic="YES" id="zdc-Fj-atz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="djK-bd-kd0" id="cSY-UB-J84"/>
+                        <outlet property="textField" destination="wCc-NC-47X" id="E7i-XF-2h7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
