@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -65,8 +67,47 @@
                     <view key="view" contentMode="scaleToFill" id="IyI-qs-ik5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-QZ-Bwy">
+                                <rect key="frame" x="165" y="285" width="270" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="return:" destination="uZH-KV-6cs" eventType="editingDidEnd" id="bDq-2s-sIu"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-Io-rLL">
+                                <rect key="frame" x="538" y="285" width="46" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonClicked:" destination="uZH-KV-6cs" eventType="touchUpInside" id="t5t-Vt-f52"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O9J-QZ-Bwy" firstAttribute="leading" secondItem="IyI-qs-ik5" secondAttribute="leadingMargin" constant="10" id="6aq-9Y-dPt"/>
+                            <constraint firstAttribute="centerY" secondItem="O9J-QZ-Bwy" secondAttribute="centerY" id="9Sv-O1-n3m"/>
+                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="trailing" secondItem="IyI-qs-ik5" secondAttribute="trailingMargin" id="G6F-RD-HJI"/>
+                            <constraint firstAttribute="centerX" secondItem="O9J-QZ-Bwy" secondAttribute="centerX" constant="-0.5" id="Icl-Ft-bJQ"/>
+                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="leading" secondItem="O9J-QZ-Bwy" secondAttribute="trailing" constant="10" id="NcO-st-Jnn"/>
+                            <constraint firstAttribute="centerY" secondItem="Xjg-Io-rLL" secondAttribute="centerY" id="rwi-W4-kFk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O9J-QZ-Bwy" secondAttribute="trailing" constant="10" id="uAM-bg-Rkz"/>
+                            <constraint firstItem="Xjg-Io-rLL" firstAttribute="width" secondItem="IyI-qs-ik5" secondAttribute="height" multiplier="23:300" id="uyI-1B-bmW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Icl-Ft-bJQ"/>
+                                <exclude reference="uAM-bg-Rkz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="O9J-QZ-Bwy" id="Nns-Np-v9u"/>
+                        <outlet property="sendButton" destination="Xjg-Io-rLL" id="mM6-hk-Kiq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isp-rq-WPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

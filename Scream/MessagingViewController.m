@@ -9,6 +9,9 @@
 #import "MessagingViewController.h"
 
 @interface MessagingViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *inputTextField;
+@property (strong, nonatomic) IBOutlet UIButton *sendButton;
+
 
 @end
 
@@ -26,6 +29,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+//send button
+- (IBAction)sendButtonClicked:(id)sender
+{
+    NSString *string = self.inputTextField.text;
+    [self.inputTextField setText:@""];
+}
+
+
 /*
 #pragma mark - Navigation
 
@@ -35,5 +46,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end
