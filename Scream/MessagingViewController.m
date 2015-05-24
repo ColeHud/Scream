@@ -64,12 +64,19 @@
         NSString *channel = p[@"channelUserID"];
         
         NSLog(channel);
-        PFPush *push = [[PFPush alloc] init];
         
-        // Be sure to use the plural 'setChannels'.
-        [push setChannel:channel];
-        [push setMessage:string];
-        [push sendPushInBackground];
+        //only push to people who aren't you
+        NSLog(@"%@, %@", channel, _user[@"channelUserID"]);
+        if(![channel isEqualToString:_user[@"channelUserID"]])
+        {
+            PFPush *push = [[PFPush alloc] init];
+            
+            // Be sure to use the plural 'setChannels'.
+            [push setChannel:channel];
+            [push setMessage:string];
+            [push sendPushInBackground];
+        }
+        
     }
     
     
